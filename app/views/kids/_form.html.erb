@@ -1,0 +1,22 @@
+<%= form_for @kid do |f| %>
+
+<% if @kid.errors.any? %>
+<ul>
+  <% @kid.errors.full_messages.each do |message| %>
+  <li> <%= message %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= f.label :name %>
+<%= f.label text_field :name %>
+<br>
+<%= f.label :favorite_toy %>
+<%= f.label text_field :favorite_toy %>
+<br>
+<%= f.label :age %>
+<%= f.label number_field :age %>
+<%= f.submit %>
+<%= link_to "Cancel", kids_path %>
+
+<% end %>

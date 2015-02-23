@@ -1,0 +1,13 @@
+
+<h1> Kid List </h1>
+<% @kids.each do |k| %>
+<br>
+<%= k.name %>
+<br>
+<%= k.favorite_toy %>
+<br>
+<%= k.age %>
+<br><br>
+<%= link_to "Edit", edit_kid_path(@kid) %>  |  <%= link_to "Delete", kid_path(@kid), method: :delete, data:{confirm: "Kid has been deleted"} %>
+<br>
+<% end %>
